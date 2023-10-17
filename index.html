@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-----------Important meta tags----------->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Junior Frontend Mentor Challenge to build a landing page for a company named BLOGR">
+    <meta property="og:description" content="Junior Frontend Mentor Challenge to build a landing page for a company named BLOGR">
+    <meta name="author" content="Ogunsanwo David Oluwadamilare">
+    <meta property="og:author" content="Ogunsanwo David Oluwadamilare">
+    <meta property="og:image" content="https://github.com/ogunsanwodavid/FYLO/assets/images/favicon-32x32.png">
+    <meta property="og:title" content="BLOGR: A Landing Page">
+
+    <!-----------Title---------->
+    <title>BLOGR: A Landing Page</title>
+
+    <!------------Favicon------------->
+    <link rel="shortcut icon" href="./dist/images/favicon-32x32.png" type="image/x-icon">
+
+    <!-------Linked stylesheets, fonts, icons and libraries------------>
+    <link rel="stylesheet" href="./dist/css/main.css">
+
+    <!----------Fontawesome icons---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!--------Google Fonts----------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!------Scripts---------->
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <img src="./dist/images/logo.svg" alt="" class="logo" id="logo">
+
+                <ul>
+                    <li class="dropdown dropdown-1">
+                        <button class="dropdown-btn" aria-label="menu button" aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-menu">
+                            <span>Product</span>
+                            <!--<img src="./dist/images/icon-arrow-down.svg" class="arrow" alt="#">-->
+                            <i class="fa fa-chevron-up arrow" class="arrow"></i>
+                        </button>
+
+                        <ul class="dropdown-content">
+                            <li><span>Overview</span></li>
+                            <li><span>Pricing</span></li>
+                            <li><span>Marketplace</span></li>
+                            <li><span>Features</span></li>
+                            <li><span>Integrations</span></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-2">
+                        <button class="dropdown-btn" aria-label="menu button" aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-menu">
+                            <span>Company</span>
+                            <!--<img src="./dist/images/icon-arrow-down.svg" class="arrow" alt="#">-->
+                            <i class="fa fa-chevron-up arrow" class="arrow"></i>
+                        </button>
+
+                        <ul class="dropdown-content">
+                            <li><span>About</span></li>
+                            <li><span>Team</span></li>
+                            <li><span>Blog</span></li>
+                            <li><span>Careers</span></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-3">
+                        <button class="dropdown-btn" aria-label="menu button" aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-menu">
+                            <span>Connect</span>
+                            <!--<img src="./dist/images/icon-arrow-down.svg" class="arrow" alt="#">-->
+                            <i class="fa fa-chevron-up arrow" class="arrow"></i>
+                        </button>
+    
+                        <ul class="dropdown-content">
+                            <li><span>Contact</span></li>
+                            <li><span>Newsletter</span></li>
+                            <li><span>Linkedin</span></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <script>
+                    const dropdownBtn = document.querySelector(".dropdown-1 .dropdown-btn");
+                    const dropdownCaret = document.querySelector(".dropdown-1 .dropdown-btn .arrow");
+                    const dropdownContent = document.querySelector(".dropdown-1 .dropdown-content");
+        
+                    // add click event to dropdown button
+                    dropdownBtn.addEventListener("click", () => {
+                    // add rotate to caret element
+                    dropdownCaret.classList.toggle("arrow-rotate");
+                    // add open styles to menu element
+                    dropdownContent.classList.toggle("menu-open");
+                    dropdownBtn.setAttribute(
+                        "aria-expanded",
+                        dropdownBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+                    );
+                    });
+                </script>
+        
+                <script>
+                    const dropdownBtn2 = document.querySelector(".dropdown-2 .dropdown-btn");
+                    const dropdownCaret2 = document.querySelector(".dropdown-2 .dropdown-btn .arrow");
+                    const dropdownContent2 = document.querySelector(".dropdown-2 .dropdown-content");
+        
+                    // add click event to dropdown button
+                    dropdownBtn2.addEventListener("click", () => {
+                    // add rotate to caret element
+                    dropdownCaret2.classList.toggle("arrow-rotate");
+                    // add open styles to menu element
+                    dropdownContent2.classList.toggle("menu-open");
+                    dropdownBtn2.setAttribute(
+                        "aria-expanded",
+                        dropdownBtn2.getAttribute("aria-expanded") === "true" ? "false" : "true"
+                    );
+                    });
+                </script>
+
+                <script>
+                    const dropdownBtn3 = document.querySelector(".dropdown-3 .dropdown-btn");
+                    const dropdownCaret3 = document.querySelector(".dropdown-3 .dropdown-btn .arrow");
+                    const dropdownContent3 = document.querySelector(".dropdown-3 .dropdown-content");
+        
+                    // add click event to dropdown button
+                    dropdownBtn3.addEventListener("click", () => {
+                    // add rotate to caret element
+                    dropdownCaret3.classList.toggle("arrow-rotate");
+                    // add open styles to menu element
+                    dropdownContent3.classList.toggle("menu-open");
+                    dropdownBtn3.setAttribute(
+                        "aria-expanded",
+                        dropdownBtn3.getAttribute("aria-expanded") === "true" ? "false" : "true"
+                    );
+                    });
+                </script>
+
+                <div class="navright">
+                    <span>Login</span>
+                    <button>Sign Up</button>
+
+                    <img src="./dist/images/icon-hamburger.svg" class="icon icon-hambg" onclick="openNav()" alt="#" id="icon-hambg">
+                    <img src="./dist/images/icon-close.svg" class="icon icon-close" alt="" onclick="closeNav()" id="icon-close">
+                </div>
+            </nav>
+
+            <h1>A modern publishing platform</h1>
+            <h3>Grow your audience and build your online brand</h3>
+
+            <div class="buttons">
+                <button class="btn btn-1">Start for Free</button>
+                <button class="btn btn-2"> Learn More</button>
+            </div>
+        </header>
+
+        <section class="nav-dropdown" id="hidden-nav">
+            <ul class="links">
+                <li class="indropdown indropdown-1">
+                    <button class="indropdown-btn" aria-label="menu button" aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-menu">
+                        <span>Product</span>
+                        <!--<img src="./dist/images/icon-arrow-down.svg" class="arrow" alt="#">-->
+                        <i class="fa fa-chevron-down arrow" class="arrow"></i>
+                    </button>
+
+                    <ul class="indropdown-content">
+                        <li><span>Overview</span></li>
+                        <li><span>Pricing</span></li>
+                        <li><span>Marketplace</span></li>
+                        <li><span>Features</span></li>
+                        <li><span>Integrations</span></li>
+                    </ul>
+                </li>
+
+                <li class="indropdown indropdown-2">
+                    <button class="indropdown-btn" aria-label="menu button" aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-menu">
+                        <span>Company</span>
+                        <!--<img src="./dist/images/icon-arrow-down.svg" class="arrow" alt="#">-->
+                        <i class="fa fa-chevron-down arrow" class="arrow"></i>
+                    </button>
+
+                    <ul class="indropdown-content">
+                        <li><span>About</span></li>
+                        <li><span>Team</span></li>
+                        <li><span>Blog</span></li>
+                        <li><span>Careers</span></li>
+                    </ul>
+                </li>
+
+                <li class="indropdown indropdown-3">
+                    <button class="indropdown-btn" aria-label="menu button" aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-menu">
+                        <span>Connect</span>
+                        <!--<img src="./dist/images/icon-arrow-down.svg" class="arrow" alt="#">-->
+                        <i class="fa fa-chevron-down arrow" class="arrow"></i>
+                    </button>
+
+                    <ul class="indropdown-content">
+                        <li><span>Contact</span></li>
+                        <li><span>Newsletter</span></li>
+                        <li><span>Linkedin</span></li>
+                    </ul>
+                </li>
+
+                <script>
+                    const indropdownBtn = document.querySelector(".indropdown .indropdown-btn");
+                    const indropdownCaret = document.querySelector(".indropdown .indropdown-btn .arrow");
+                    const indropdownContent = document.querySelector(".indropdown-content");
+            
+                    // add click event to dropdown button
+                    indropdownBtn.addEventListener("click", () => {
+                    // add rotate to caret element
+                    indropdownCaret.classList.toggle("arrow-rotate");
+                    // add open styles to menu element
+                    indropdownContent.classList.toggle("menu-open");
+                    indropdownBtn.setAttribute(
+                        "aria-expanded",
+                        indropdownBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+                    );
+                    indropdownCaret2.classList.remove("arrow-rotate");
+                    indropdownContent2.classList.remove("menu-open");
+                    indropdownCaret3.classList.remove("arrow-rotate");
+                    indropdownContent3.classList.remove("menu-open");
+                    });
+                </script>
+
+                <script>
+                    const indropdownBtn2 = document.querySelector(".indropdown-2 .indropdown-btn");
+                    const indropdownCaret2 = document.querySelector(".indropdown-2 .indropdown-btn .arrow");
+                    const indropdownContent2 = document.querySelector(".indropdown-2 .indropdown-content");
+
+                    // add click event to dropdown button
+                    indropdownBtn2.addEventListener("click", () => {
+                    // add rotate to caret element
+                    indropdownCaret2.classList.toggle("arrow-rotate");
+                    // add open styles to menu element
+                    indropdownContent2.classList.toggle("menu-open");
+                    indropdownBtn2.setAttribute(
+                        "aria-expanded",
+                        indropdownBtn2.getAttribute("aria-expanded") === "true" ? "false" : "true"
+                    );
+                    indropdownCaret.classList.remove("arrow-rotate");
+                    indropdownContent.classList.remove("menu-open");
+                    indropdownCaret3.classList.remove("arrow-rotate");
+                    indropdownContent3.classList.remove("menu-open");
+                    });
+                </script>
+
+                <script>
+                    const indropdownBtn3 = document.querySelector(".indropdown-3 .indropdown-btn");
+                    const indropdownCaret3 = document.querySelector(".indropdown-3 .indropdown-btn .arrow");
+                    const indropdownContent3 = document.querySelector(".indropdown-3 .indropdown-content");
+
+                    // add click event to dropdown button
+                    indropdownBtn3.addEventListener("click", () => {
+                    // add rotate to caret element
+                    indropdownCaret3.classList.toggle("arrow-rotate");
+                    // add open styles to menu element
+                    indropdownContent3.classList.toggle("menu-open");
+                    indropdownBtn3.setAttribute(
+                        "aria-expanded",
+                        indropdownBtn3.getAttribute("aria-expanded") === "true" ? "false" : "true"
+                    );
+                    indropdownCaret.classList.remove("arrow-rotate");
+                    indropdownContent.classList.remove("menu-open");
+                    indropdownCaret2.classList.remove("arrow-rotate");
+                    indropdownContent2.classList.remove("menu-open");
+                    });
+                </script>
+            </ul>
+
+            <div class="bottom">
+                <div class="login">Login</div>
+                <button>Sign Up</button>
+            </div>
+        </section>
+
+        <script>
+            let hambg = document.getElementById("icon-hambg");
+            let menuClose = document.getElementById("icon-close");
+            let navDrop = document.getElementById("hidden-nav");
+            function openNav() {
+                hambg.style.display = "none";
+                menuClose.style.display = "block";
+                navDrop.style.visibility = "visible";
+            }
+
+            function closeNav(){
+                hambg.style.display = "block";
+                menuClose.style.display = "none";
+                navDrop.style.visibility = "hidden";
+            }
+        </script>
+
+        <main class="services">
+            <h2>Designed for the future</h2>
+
+            <div class="content">
+                <div class="texts">
+                    <div class="text-con text-con-1">
+                        <h3>Introducing an extensible editor</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nihil laudantium soluta quibusdam eius. Deleniti, eaque. Optio repellendus illum ipsa illo mollitia nesciunt cum quas exercitationem repellat culpa dolorem eaque obcaecati beatae, ea inventore quod, velit esse assumenda voluptas nam?</p>
+                    </div>
+                    <div class="text-con text-con-2">
+                        <h3>Robust content management</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque nihil laudantium soluta quibusdam eius. Deleniti, eaque. Optio repellendus illum ipsa illo mollitia nesciunt cum quas exercitationem repellat culpa dolorem eaque obcaecati beatae, ea inventore quod, velit esse assumenda voluptas nam?</p>
+                    </div>
+                </div>
+
+                <div class="img">
+                    <img src="./dist/images/illustration-editor-desktop.svg" class="editor-desktop" alt="">
+                    <img src="./dist/images/illustration-editor-mobile.svg" class="editor-mobile" alt="">
+                </div>
+            </div>
+        </main>
+
+        <section class="state-of-art">
+            <div class="img">
+                <img src="./dist/images/illustration-phones.svg" alt="#">
+            </div>
+
+            <div class="texts">
+                <h2>State of the Art Infrastructure</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, inventore aliquid tempore quibusdam asperiores aspernatur eum, cumque enim sit dolorum eius. Iste suscipit perferendis praesentium nostrum laboriosam deserunt sit molestias!</p>
+            </div>
+        </section>
+
+        <section class="more-serv">
+            <div class="img">
+                <img src="./dist/images/illustration-laptop-desktop.svg" class="laptop-desktop" alt="#">
+                <img src="./dist/images/illustration-laptop-desktop.svg" class="laptop-mobile" alt="#">
+            </div>
+            <div class="texts">
+                <div class="text-con">
+                    <h3>Free, open, simple</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde necessitatibus corporis eligendi nesciunt assumenda voluptas, corrupti, odio mollitia ea vitae sapiente, quasi optio rem accusamus quod totam delectus natus inventore.</p>
+                </div>
+                <div class="text-con">
+                    <h3>Powerful tooling</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur accusantium eaque explicabo consequuntur, error ex illum rerum culpa magni, dolor nisi odit sint vitae, incidunt exercitationem repellendus! Fuga, sint quod?</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="logo">
+                <img src="./dist/images/logo.svg" alt="" class="logo">
+            </div>
+
+            <div class="textlinks">
+                <h4>Product</h4>
+                <ul>
+                    <li>Overview</li>
+                    <li>Pricing</li>
+                    <li>Marketplace</li>
+                    <li>Features</li>
+                    <li>Integrations</li>
+                </ul>
+            </div>
+            <div class="textlinks">
+                <h4>Company</h4>
+                <ul>
+                    <li>About</li>
+                    <li>Team</li>
+                    <li>Blog</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+            <div class="textlinks">
+                <h4>Connect</h4>
+                <ul>
+                    <li>Contact</li>
+                    <li>Newsletter</li>
+                    <li>Linkedin</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
